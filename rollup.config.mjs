@@ -1,7 +1,14 @@
+import json from '@rollup/plugin-json';
+import typescript from '@rollup/plugin-typescript';
+
 export default {
-    input: 'src/main.js',
+    input: 'src/index.tsx',
     output: {
-        file: 'bundle.js',
+        file: 'dist/bundle.js',
         format: 'cjs'
-    }
+    },
+    plugins: [
+        json(),
+        typescript()
+    ]
 };
